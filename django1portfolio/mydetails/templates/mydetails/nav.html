@@ -1,0 +1,27 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="{% static 'js/materialize.min.js' %}"> </script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">Explore Youreslf</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'education' %}">Education</a></li>
+                <li><a href="{% url 'certificate' %}">Achivements</a></li>
+                <li><a href="{% url 'project' %}">Project</a></li>
+                <li><a href="{% url 'experience' %}">Experience</a></li>
+              </ul>
+            </div>
+          </nav>
+          {% block body %}
+          
+          {% endblock %}
+    </body>
+    {% block script %}
+    {% endblock %}
+</html>
