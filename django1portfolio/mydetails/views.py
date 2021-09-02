@@ -14,6 +14,12 @@ def Project(request):
 def Certificate(request):
     return render(request,'mydetails/certificate.html')
 
+def Achivements(request):
+    return render(request,'mydetails/achivements.html')
+
 def Experience(request):
     return render(request,'mydetails/experience.html')
+
+def Skills(request):
+    return render(request,'mydetails/skills.html')
 

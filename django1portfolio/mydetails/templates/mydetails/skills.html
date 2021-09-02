@@ -1,0 +1,60 @@
+{% extends 'mydetails/nav.html' %}
+
+{% block body %}
+<div class="container">
+    <h5 class="center-align">Programming Skills</h5>
+    <div class="row">
+        <div class="col s12 m12">
+            <ul class="collection">
+                <li class="collection-item"> <b> Python</b> </li>
+                <li class="collection-item"> <b>Java </b></li>
+                <li class="collection-item"> <b>C / C++ </b></li>
+                <li class="collection-item"> <b>DS / Algo</b> </li>
+            </ul>
+        </div>        
+    </div>
+</div>
+<div class="container">
+    <h5 class="center-align">Framework Skills</h5>
+    <div class="row">
+        <div class="col s12 m12">
+            <ul class="collection">
+                <li class="collection-item"><b> Django </b></li>
+                <li class="collection-item"> <b>Reack</b> </li>
+            </ul>
+        </div>        
+    </div>
+</div>
+<div class="container">
+    <h5 class="center-align">Database Skills</h5>
+    <div class="row">
+        <div class="col s12 m12">
+            <ul class="collection">
+                <li class="collection-item"><b> MySQL </b></li>
+                <li class="collection-item"> <b>Postgresql</b> </li>
+                <li class="collection-item"> <b>Oracle</b> </li>
+                <li class="collection-item"> <b>Sqlite</b> </li>
+            </ul>
+        </div>        
+    </div>
+</div>
+<div class="container">
+    <h5 class="center-align">Area Of Intrest</h5>
+    <div class="row">
+        <div class="col s12 m12">
+            <ul class="collection">
+                <li class="collection-item"><b> Cloud </b></li>
+                <li class="collection-item"> <b>ML / Data Analytics </b></li>
+            </ul>
+        </div>        
+    </div>
+</div>
+{% endblock %}
+{% block script %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems);
+  });
+</script>
+{% endblock %}
