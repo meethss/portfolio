@@ -1,31 +1,64 @@
 {% load static %}
-<html>
-    <head>
-        <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="{% static 'js/materialize.min.js' %}"> </script>
-    </head>
-    <body>
-        <nav>
-            <div class="nav-wrapper">
-              <a href="#" class="brand-logo">Explore Youreslf</a>
-              <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="{% url 'education' %}">Education</a></li>
-                <li><a href="{% url 'certificate' %}">Workshop</a></li>
-                <li><a href="{% url 'achivements' %}">Achivements</a></li>
-                <li><a href="{% url 'project' %}">Project</a></li>
-                <li><a href="{% url 'experience' %}">Experience</a></li>
-                <li><a href="{% url 'skills' %}">Skills</a></li>
-                <li><a href="https://drive.google.com/file/d/103KFSreKyO4CtsNDHrxGgOcpYt4usDDZ/view?usp=sharing" target="_blank">Resume</a></li>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-              </ul>
-            </div>
-          </nav>
-          {% block body %}
-          
-          {% endblock %}
-    </body>
-    {% block script %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<html>
+  <head>
+    <style>
+      body{
+ 		height: 500px;
+ 	}
+    </style>
+  </head>
+  <body>
+    <nav class="red" style="padding:0px 10px; position: fixed;">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Explore Yourself</a>
+
+        <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+          <i class="material-icons">menu</i>
+        </a>
+
+        <ul class="right hide-on-med-and-down "  >
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'education' %}">Education</a></li>
+          <li><a href="{% url 'certificate' %}">Workshop</a></li>
+          <li><a href="{% url 'achivements' %}">Achivements</a></li>
+          <li><a href="{% url 'project' %}">Project</a></li>
+          <li><a href="{% url 'experience' %}">Experience</a></li>
+          <li><a href="{% url 'skills' %}">Skills</a></li>
+          <li><a href="https://drive.google.com/file/d/103KFSreKyO4CtsNDHrxGgOcpYt4usDDZ/view?usp=sharing" target="_blank">Resume</a></li>
+
+        </ul>
+      </div>
+    </nav>
+  <br>
+  <br>
+
+
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'education' %}">Education</a></li>
+      <li><a href="{% url 'certificate' %}">Workshop</a></li>
+      <li><a href="{% url 'achivements' %}">Achivements</a></li>
+      <li><a href="{% url 'project' %}">Project</a></li>
+      <li><a href="{% url 'experience' %}">Experience</a></li>
+      <li><a href="{% url 'skills' %}">Skills</a></li>
+      <li><a href="https://drive.google.com/file/d/103KFSreKyO4CtsNDHrxGgOcpYt4usDDZ/view?usp=sharing" target="_blank">Resume</a></li>
+    </ul>
+    {% block body %}
     {% endblock %}
+  </body>
+  {% block script %}
+  {% endblock %}
 </html>
+<script>
+  	$(document).ready(function(){
+ 		$('.sidenav').sidenav();
+ 	});
+
+</script>
